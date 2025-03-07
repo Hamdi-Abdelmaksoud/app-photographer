@@ -2,14 +2,20 @@
 
 @plugin "tailwindcss-animate";
 
+html{
+  scroll-behavior: smooth;
+}
 body{
-  background-image:url('/background.jpg') ;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat ;
   background-attachment: fixed;
 }
-
- 
+.img-cover {
+   background-image:url('/background.jpg') ; 
+}
+a:hover{
+color: darkgray;
+}
 
  
