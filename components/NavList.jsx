@@ -4,19 +4,19 @@ export default function NavList({ ulStyle, liStyle, textColor }) {
   return (
     <ul className={ulStyle}>
       <li className={liStyle}>
-        <Link href="/" style={{ color: textColor }}>Mariages</Link>
+        <Link href="/" className={`text-${textColor} hover:text-gray-500`}>Mariages</Link>
       </li>
       <li className={liStyle}>
-        <Link href="/" style={{ color: textColor }}>Street</Link>
+        <Link href="/" className={`text-${textColor} hover:text-gray-500`}>Street</Link>
       </li>
       <li className={liStyle}>
-        <Link href="/" style={{ color: textColor }}>Shootings</Link>
+        <Link href="/" className={`text-${textColor} hover:text-gray-500`}>Shootings</Link>
       </li>
       <li className={liStyle}>
-        <Link href="/" style={{ color: textColor }}>Home</Link>
+        <Link href="/" className={`text-${textColor} hover:text-gray-500`}>Home</Link>
       </li>
       <li className={liStyle}>
-        <Link href="/" style={{ color: textColor }}>Corporate & Commercial</Link>
+        <Link href="/" className={`text-${textColor} hover:text-gray-500`}>Corporate & Commercial</Link>
       </li>
     </ul>
   );

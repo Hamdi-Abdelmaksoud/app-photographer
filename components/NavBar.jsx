@@ -31,10 +31,10 @@ export default function NavBar() {
         <NavList textColor={textColor} liStyle={"p-4"} ulStyle={"hidden sm:flex"} />
         {/* Mobile buttons */}
         <div className="sm:hidden block z-10" >
-          {menu ? <AiOutlineMenu size={20} color={textColor} onClick={toggleMenu} /> : <AiOutlineClose size={20} onClick={toggleMenu} />}
+          {menu ? <AiOutlineClose size={20} color={textColor} onClick={toggleMenu} /> : <AiOutlineMenu size={20} onClick={toggleMenu} />}
         </div>
         {/* mobile menu */}
-        <div className={menu ? "sm:hidden absolute top-0  left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
+        <div className={!menu ? "sm:hidden absolute top-0  left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
           : "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
         }>
           <NavList liStyle={"p-4 text-4xl"} ulStyle={'flex-col '} />
