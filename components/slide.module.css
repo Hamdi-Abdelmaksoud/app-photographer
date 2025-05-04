@@ -1,0 +1,19 @@
+.slider{
+  height: 250px;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: grid;
+  place-items: center;
+}
+.slideTrack{
+  display: flex;
+  width: calc(250*5);
+}
+.slide{
+  height: 250px;
+  width: 250px;
+display: flex;
+align-items: center;
+padding: 15px;
+}

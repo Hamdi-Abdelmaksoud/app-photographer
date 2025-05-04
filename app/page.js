@@ -1,5 +1,7 @@
 import Contact from "@/components/contact";
 import FirstSection from "@/components/FirstSection";
+import Hero from "@/components/hero";
+import Slider from "@/components/Slider";
 
 export default function Home() {
   return (
@@ -7,7 +9,8 @@ export default function Home() {
       {/* <Navbar /> */}
       <FirstSection />
       <Contact />
-      <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi nam necessitatibus suscipit excepturi perspiciatis tempore quis possimus cum exercitationem quasi, quia consequuntur perferendis esse totam ab. Ab incidunt assumenda magni.</div>
+     <Hero />
+     <Slider />
     </div>
   );
 }

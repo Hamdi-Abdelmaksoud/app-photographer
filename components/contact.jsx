@@ -12,8 +12,7 @@ export default function Contact() {
             <li key={index}>
               <Link href={href} aria-label={label}>
                 <span
-                  className="w-9 h-9 bg-amber-50 flex justify-center items-center rounded-full shadow-md"
-                                >
+                  className="w-9 h-9 bg-amber-50 flex justify-center items-center rounded-full shadow-md">
                   {icon}
                 </span>
               </Link>
