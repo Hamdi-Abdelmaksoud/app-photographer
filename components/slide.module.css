@@ -1,19 +1,81 @@
-.slider{
+/* Conteneur principal du slider */
+.slider {
   height: 250px;
   margin: auto;
   position: relative;
   width: 90%;
+  overflow: hidden; /* Cache les parties débordantes des images */
   display: grid;
-  place-items: center;
+  place-items: center; /* Centre le contenu horizontalement et verticalement */
 }
-.slideTrack{
-  display: flex;
-  width: calc(250*5);
+
+/*La piste qui contient toutes les slides (10 au total = 5 originales + 5 copiées) */
+.slideTrack {
+  display: flex; /* Affiche les slides en ligne */
+  width: calc(250px * 10); /* Largeur totale = largeur d'une slide × 10 slides */
+  animation: scroll 40s linear infinite; /* Fait défiler vers la gauche en boucle */
 }
-.slide{
+
+/*  Pause l'animation quand on survole le slider */
+.slider:hover .slideTrack {
+  animation-play-state: paused;
+}
+
+/* Défilement horizontal de la piste */
+@keyframes scroll {
+  0% {
+    transform: translateX(0); /* Position initiale */
+  }
+  100% {
+    transform: translateX(calc(-250px * 5)); 
+    /* Décale vers la gauche d'une série de 5 slides (la moitié), 
+       pendant que l'autre moitié prend le relais. */
+  }
+}
+
+/*  Style de chaque slide individuelle */
+.slide {
   height: 250px;
   width: 250px;
-display: flex;
-align-items: center;
-padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  perspective: 100px; /* Donne un effet 3D au survol */
+}
+
+/*  Image à l’intérieur de chaque slide */
+.slide img {
+  height: 100%;
+  transition: transform 0.3s ease; /* Animation douce au survol */
+}
+
+/* 🌀 Effet 3D lors du survol de l’image */
+.slide img:hover {
+  transform: translateZ(20px); /* Soulève légèrement l’image */
+}
+
+/* Ombres en dégradé sur les côtés pour un effet esthétique */
+.slider::before,
+.slider::after {
+  content: '';
+  position: absolute;
+  width: 15%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none; /* Laisse les événements passer à travers */
+}
+
+/* 🔳 Ombre à gauche */
+.slider::before {
+  left: 0;
+  top: 0;
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+/* 🔳 Ombre à droite */
+.slider::after {
+  right: 0;
+  top: 0;
+  background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
 }
