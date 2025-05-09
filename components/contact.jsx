@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <div className="fixed left-3.5 top-[14vh] bottom-[14vh] flex flex-col items-center z-30">
       {/* Barres de décoration */}
-      <div className="w-2.5 h-[25vh] bg-amber-500"></div>
+      <div className="w-2.5 h-[25vh]  bg-gradient-orange-yellow"></div>
       {/* Liste des icônes */}
       <div className="h-[22vh] flex flex-col justify-center space-y-4">
         <ul className="w-full flex flex-col justify-center items-center space-y-4">
@@ -21,7 +21,7 @@ export default function Contact() {
         </ul>
       </div>
       {/* Barres de décoration */}
-      <div className="w-2.5 h-[25vh] bg-amber-500"></div>
-    </div>
+      <div className="w-2.5 h-[25vh] bg-gradient-orange-yellow"></div>
+      </div>
   );
 }

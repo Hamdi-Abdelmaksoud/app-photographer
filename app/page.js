@@ -1,7 +1,8 @@
 import Contact from "@/components/contact";
 import FirstSection from "@/components/FirstSection";
 import Hero from "@/components/hero";
-import Slider from "@/components/Slider";
+import AutoSlider from "@/components/AutoSlider";
+import Slide from "@/components/Slide";
 
 export default function Home() {
   return (
@@ -10,7 +11,9 @@ export default function Home() {
       <FirstSection />
       <Contact />
      <Hero />
-     <Slider />
+     <Slide />
+     <AutoSlider />
+
     </div>
   );
 }

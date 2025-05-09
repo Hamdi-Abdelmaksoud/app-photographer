@@ -26,7 +26,8 @@ export default function NavBar() {
       {/* ease-in et duration pour le changement du couleur en scrolling */}
       <nav className="max-w-[1240px] m-auto flex justify-between items-center p-4 text-white">
         <div>
-          <h1 style={{color:`${textColor}`}} className="font-bold text-4xl">Studio Mouche</h1>
+          <h1  className="font-bold text-2xl logo">Studio Mouche</h1>
+          {/* <h1 style={{color:`${textColor}`}} className="font-bold text-4xl">Studio Mouche</h1> */}
         </div>
         <NavList textColor={textColor} liStyle={"p-4"} ulStyle={"hidden sm:flex"} />
         {/* Mobile buttons */}
